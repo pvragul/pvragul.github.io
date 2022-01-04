@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Merienda+One&family=Nunito&family=Comfortaa&display=swap');
+
+
+::-webkit-scrollbar {
+	
+	width: 6px;
+  }
+/* ::-webkit-scrollbar:hover {
+	width: 8px;
+  } */
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	border-radius: 50px;
+	background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	width: 8px;
+	background: #555; 
+  }
+
+
+
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size:1rem;
+	margin:0;
+	padding: 0;
+	background-color: #FDFDFD;
+}
+
+
+
+/*=========================
+-----------Header----------
+=========================*/
+
+header{
+	color: #FDFDFD;
+	/* background-color: #001011; */
+	width:100%;
+	height:auto;
+	padding: 5px 0;
+	display: none;
+	align-items:center;
+	justify-content: space-between;
+	z-index: 99;
+	transition: all 2s ease;
+	position: fixed;
+}
+header .logo{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:2em;		
+	margin:5px 15px 0;
+	letter-spacing: 3px;
+}
+.logo span{
+	color: #dc143c;
+}
+.logo:hover span{
+	color: #FDFDFD;
+	cursor: pointer;
+	transition: ease all 1s;
+}
+header i.toogle{
+	font-size: 1.5em;
+	margin:5px 20px;
+	display: none;
+	transition: all 2s ease;
+	transform: rotateY(180deg);
+}
+nav{
+	font-size:1.5em;
+	margin: 10px 15px;
+		
+}
+.nav-menu{
+	top: 37px;
+	/* background-color: #001011; */
+	
+}
+nav ul{
+	list-style: none;
+	margin: 0;
+	margin-inline: 0;
+	padding-inline: 0;
+	margin-block: 0;
+	text-align: right;
+
+}
+nav li{
+	display: inline-block;
+	font-family: 'Nunito', sans-serif;
+}
+nav a{
+	text-decoration: none;
+	color: #fdfdfd;
+	transition: all ease 0.4s;
+	padding: 5px 10px;
+}
+nav a:hover{
+	background-color: #fdfdfd;
+	color: #001011;
+	border-radius: 10px;
+	transition: all ease 0.4s;
+	font-size: 0.8em;
+}
+nav a:hover i{
+	color: #dc143c;
+}
+.show {
+	visibility: visible;
+	display: block;
+}
+nav i{
+	padding-right: 10px;
+}
+.active{
+	background-color: #fdfdfd;
+	color: #001011;
+	border-radius: 10px;
+	transition: all ease 0.4s;
+	font-size: 0.8em;
+}
+@media(max-width: 800px){
+	*{
+		transition: all 0.4s ease-in-out;
+	}
+	nav {
+		position: absolute;
+		width: 100%;
+		display: none;
+		margin: 0;
+	}
+	nav li{
+		display: block;
+		margin: 15px 30px 15px;
+	}
+	header i.toogle{
+		display: inline;
+	}
+	footer .mobile-view{
+		display: flex;
+	}
+	footer .max-view{
+		display: none;
+	}
+	section .nameTitle{
+		margin-left: 20px;
+		font-size: 3em;
+	}
+	section .titleDesc{
+		margin-left: 20px;
+		font-size: 1.5em;
+	}
+	section .home-icon{
+		margin-left: 20px;
+		font-size: 1.2em;
+		column-gap: 15px;
+	}
+	section .timeline{
+		margin-left: 20px;
+		width: 70%;
+	}
+	section .project-card{
+		width: 100%;
+		margin: 20px 30px;
+	}
+	section .contact-details{
+		width: 90%;
+	}
+	section .contact-card{
+		width: 100%;
+	}
+
+}
+
+
+/*=========================
+----------Home----------
+=========================*/
+
+.home{
+	background-image: url(./images/photoBg.jpg);
+	background-position: right;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.welcomeContent{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	height: 100%;
+	letter-spacing: 10px;
+	row-gap: 20px;
+	
+}
+.nameTitle{
+	margin-left: 80px;
+	font-family: 'Merienda One', cursive;
+	font-size: 5em;
+	color: #dc143c;
+	transition: ease-in-out 0.4s all;
+	cursor: pointer;
+	animation: shadow 6s infinite;
+}
+.titleDesc{
+	margin-left: 80px;
+	font-size: 2em;
+	color: #5a7adc;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.home-icon{
+	margin-top: 10px;
+	font-size: 2em;
+	margin-left: 80px;
+	color: #b6b6b6;
+	display: flex;
+	transition: column-gap 0.5s ease;
+	column-gap: 30px;
+}
+.home-icon i{
+	transition: all 0.3s ease-in-out;
+
+}
+.home-icon i:hover{
+	transform: scale(1.4);
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+	transition: all 0.3s ease-in-out;
+}
+.home-icon a{
+	text-decoration: none;
+	color: #b6b6b6;
+}
+
+.hint-scroll{
+	font-size: 1.3em;
+	text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	animation-name: colorfill;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+.hint-scroll a{
+	text-decoration: none;
+	color: #b6b6b6;
+}
+@keyframes colorfill {
+	0%{
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	40%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	60%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(0.5);
+		opacity: 0;
+	}
+}
+
+@keyframes shadow {
+	0%{
+		text-shadow: 0 0 0 rgba(255, 255, 255, 0.6), -2px 0 rgba(126, 148, 0, 0.5), 0 2px rgba(126, 148, 0, 0.5), 2px 0 rgba(126, 148, 0, 0.5), 0 -2px rgba(126, 148, 0, 0.5);
+	}
+	50%{
+		text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);	
+	}
+	100%{
+		text-shadow: 0 0 0 rgba(255, 255, 255, 0.6), -2px 0 rgba(126, 148, 0, 0.5), 0 2px rgba(126, 148, 0, 0.5), 2px 0 rgba(126, 148, 0, 0.5), 0 -2px rgba(126, 148, 0, 0.5);
+	}
+}
+
+
+/*=========================
+----------About----------
+=========================*/
+
+.about{
+	width: 100%;
+	position: relative;
+	background-color: rgb(0, 80, 68);
+	padding-top: 62px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.timeline{
+	margin: 20px 0;
+	width: 60%;
+	height: auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.timeline-card{
+	padding: 20px;
+	border-width: 2px;
+	border-style: dashed;
+	overflow-x: hidden;
+}
+.timeline-card:nth-child(odd){
+	border-color: transparent transparent #affd7b #affd7b;
+	border-radius: 0px 0 0 30px;
+	margin-top: -2px;
+}
+.timeline-card:nth-child(even){
+	border-color: transparent #affd7b #affd7b transparent;
+	border-radius: 0 0 30px 0;
+	text-align: right;
+	margin-top: -2px;
+}
+.title{
+	color: #affd7b;
+	text-align: center;
+	letter-spacing: 5px;
+	font-size: 2em;
+	letter-spacing: 5px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.timeline-title{
+	font-size: 1.6em;
+	color: #FDFDFD;
+	font-family: Comfortaa, sans-serif;
+}
+.timeline-body{
+	margin-top: 20px;
+	font-size: 1.3em;
+	color: #f7dc67ad;
+}
+
+
+/*=========================
+----------Projects----------
+=========================*/
+
+.project-section{
+	width: 100%;
+	position: relative;
+	background-image: url(./images/projectsBack.jfif);
+	padding-top: 62px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-attachment: fixed;
+}
+.project-section .title{
+	color: #fdfdfd;
+}
+.projects{
+	display: flex;
+	margin-top: 20px;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}
+.project-card{
+	width: 30%;
+	height: 40vh;
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px);
+	margin: 1%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #fdfdfd;
+	transition: all 0.4s;
+}
+.project-card-cover{
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	opacity: 1;
+	z-index: 1;
+	border-radius: 10px;
+	transition: all 0.2s ease;
+	background: linear-gradient(to bottom, rgb(135, 231, 115), rgb(175, 155, 2) 100% );
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.project-card-cover .title{
+	margin: 0 20px;
+	font-family: monospace;
+	color: #001011;
+}
+.project-card:hover .project-card-cover{
+	/* z-index: -1; */
+	transform: translateY(-50%) scaleY(0.1);
+	opacity: 0;
+}
+.project-card-body{
+	width: 80%;
+	color: #FDFDFD;
+	font-size: 1.3em;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.project-card-body a{
+	text-decoration: none;
+	color: #FDFDFD;
+	background-color: #0357f3;
+	border-radius: 5px;
+	padding: 8px;
+	width: fit-content;
+}
+.project-card img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	z-index: -2;
+	top: 0;
+	left: 0;
+	border-radius: 10px;
+	transform: scaleY(0.1);
+}
+
+.project-card:hover img{
+	transform: translateY(-75%) scaleY(1);
+	transition: all 0.4s ease;
+}
+
+
+/*=========================
+----------Contact Form----------
+=========================*/
+
+.contact{
+	width: 100%;
+	position: relative;
+	background-color: rgb(98, 182, 41);;
+	padding-top: 62px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.contact .title{
+	color: #FDFDFD;
+}
+.contact-details{
+	width: 85%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Nunito', sans-serif;
+	/* background-color: #FDFDFD; */
+	margin: 30px 0;
+}
+.contact-card{
+	width: 45%;
+	margin: 20px;
+	/* background-color: aquamarine; */
+	border-left: #dc143c solid 10px;
+	line-height: 2;
+	font-size: 1.3em;
+	border-radius: 20px;
+	color: #FDFDFD;
+	letter-spacing: 2px;
+}
+.contact-card span{
+	margin-left: 10px;
+	font-weight: 800;
+}
+.contact-card span i{
+	color:#dc143c;
+}
+.contact-card form{
+	margin: 20px;
+}
+
+form span{
+	color: #dc143c;
+	font-weight: normal;
+	font-size: 0.6em;
+	margin-left: -5px;
+}
+.contact-card input{
+	height: 1.3em;
+	font-size: 1em;
+	padding: 3px 10px;
+	border-radius: 5px;
+	display: block;
+	width: 90%;
+	border: none;
+}
+.contact-card textarea{
+	padding: 3px 10px;
+	border-radius: 5px;
+	font-size: 1em;
+	width: 90%;
+}
+
+
+/*=========================
+----------Footer-----------
+=========================*/
+
+
+footer{
+	bottom: 0;
+	position: relative;
+	width: 100%;
+	font-size: 1.5em;
+	font-family: 'Nunito', sans-serif;	
+	background-color: #001011;
+}
+.max-view{
+	display: block;
+	margin-right: 20px;
+	color: #FDFDFD;
+	justify-content: flex-end;
+	align-items: center;
+	display: flex;
+}
+.mobile-view{
+	margin-right: 10px;
+	color: #FDFDFD;
+	display: none;
+	justify-content: flex-end;
+	align-items: center;
+}
+.mobile-view div:nth-child(3){
+	padding: 1em;
+	border-radius: 50%;
+	background-color: #001011;
+	color: #dc143c;
+	font-size: 1em;
+}

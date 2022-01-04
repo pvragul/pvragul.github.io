@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<title>Page title</title>
+		<link rel="icon" href="./images/pvr3.png" type="image/png">
+		<style>
+				body {
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						display: flex;
+						background-color: #001011;
+				}
+				.container{
+						margin-top: 60px;
+						width: 800px;
+						height: 600px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						background-color: black;
+						
+				}
+				.btn{
+						width: auto;
+						height: 50px;						background-color: rgba(255, 255, 255, 0.5);
+						text-align: center;
+						font-size: 30px;
+						border: none;
+						
+						
+				}
+				.btn:hover{
+						background-color: rgba(200,200,200,0.5);
+						box-shadow: 0 0 5px rgba(200, 200, 200, 0.3), 0 0 10px rgba(200, 200, 200, 0.5), 0, 0, 200px rgba(200, 200, 200, 0.5)
+				}
+				/*.btn:active{
+						box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+				}*/
+				.color{
+						font-size:20px;
+						margin: 30px;
+				}
+		</style>
+</head>
+<body id="body">
+		
+				
+		<div onclick="changeColor()" class="container" id="container">
+				<button class="btn" id="btn" type="submit" onclick="changeColor()">Generate Random Color</button>
+				<div class="color" id="color">Welcome</div>
+				
+		</div>
+		<div class="container" id="ctn2">
+				<div class="color" id="clor"> abyu</div>
+		</div>
+		<script>
+				var inp="#fff";
+				function changeColor(){
+						var colorcont = "#";
+						var colortxt = "#";
+						hexcode=['0','1','2','3	','4','5','6','7','8','9','a','b','c','d','e','f'];
+						/*  for(var i= 0; i<6; i++){
+						var indexhex= Math.floor(Math.random()*14);
+						var indexcode= hexcode[indexhex];
+						var indexcodeneg = hexcode[13-indexhex]
+						colorcont += indexcode;
+						colortxt += indexcodeneg;
+						}*/
+				var indR = Math.floor(Math.random()*255);
+						var indG = Math.floor(Math.random()*255);
+						var indB = Math.floor(Math.random()*255);
+						var indexcode="rgb("+indR+","+indG+","+indB+")";
+							document.getElementById('container').style.backgroundColor=indexcode;
+						//document.getElementById('color').style.color=colortxt;
+						document.getElementById('color').innerHTML= indexcode
+						//document.getElementById('ctn2').style.backgroundColor = colortxt;
+						//document.getElementById('clor').style.color=colorcont;
+						//document.getElementById('clor').innerHTML= colortxt;
+						setInterval(changeColor, 2000);
+				}
+				//setInterval(changeColor, 2000);
+				</script>
+</body>
+</html>
