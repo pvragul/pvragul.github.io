@@ -1,3 +1,3 @@
-# pvragul-portfolio.github.io
+# pvragul Front-end Developer
 
 This is my personal portfolio here
