@@ -494,9 +494,7 @@ nav i{
 	margin-left: 10px;
 	font-weight: 800;
 }
-.contact-card span i{
-	color:#dc143c;
-}
+
 .contact-card form{
 	margin: 20px;
 }
@@ -504,8 +502,8 @@ nav i{
 form span{
 	color: #dc143c;
 	font-weight: normal;
-	font-size: 0.6em;
-	margin-left: -5px;
+	font-size: 0.5em;
+	margin-left: 0;
 }
 .contact-card input{
 	height: 1.3em;
