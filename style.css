@@ -476,13 +476,11 @@ nav i{
 	justify-content: center;
 	align-items: center;
 	font-family: 'Nunito', sans-serif;
-	/* background-color: #FDFDFD; */
 	margin: 30px 0;
 }
 .contact-card{
 	width: 45%;
 	margin: 20px;
-	/* background-color: aquamarine; */
 	border-left: #dc143c solid 10px;
 	line-height: 2;
 	font-size: 1.3em;
