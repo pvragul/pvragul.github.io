@@ -184,7 +184,9 @@ nav i{
 	section .contact-card{
 		width: 100%;
 	}
-
+	section .hint-scroll: {
+		display: none
+	}
 }
 
 
